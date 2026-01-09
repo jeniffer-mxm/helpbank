@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HelpBank - Empréstimo consignado rápido, seguro e sem burocracia. Taxas reduzidas e atendimento humanizado.">
+    <title>HelpBank - Empréstimo Consignado Rápido e Seguro</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="navbar-brand">
+                    <span class="logo-text">Help</span><span class="logo-highlight">Bank</span>
+                </div>
+                
+                <div class="navbar-menu" id="navbarMenu">
+                    <a href="#inicio" class="nav-link">Início</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#emprestimo" class="nav-link">Empréstimo Consignado</a>
+                    <a href="#simulacao" class="nav-link">Simulação</a>
+                    <a href="#contato" class="nav-link">Contato</a>
+                    <a href="https://wa.me/5521996310471?text=Olá!%20Gostaria%20de%20simular%20um%20empréstimo%20consignado" target="_blank" class="btn-cta-nav">Simular no WhatsApp</a>
+                </div>
+                
+                <button class="navbar-toggle" id="navbarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Empréstimo Consignado <span class="highlight">rápido, seguro</span> e sem burocracia
+                    </h1>
+                    <p class="hero-subtitle">
+                        Crédito aprovado com as melhores taxas do mercado. Desconto direto na folha de pagamento e atendimento humanizado.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5521996310471?text=Olá!%20Gostaria%20de%20simular%20um%20empréstimo%20consignado" target="_blank" class="btn-primary btn-large">
+                            <i class="fab fa-whatsapp"></i>
+                            Faça sua simulação agora pelo WhatsApp
+                        </a>
+                    </div>
+                    <div class="hero-badges">
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% Seguro</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-clock"></i>
+                            <span>Aprovação Rápida</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Sem Consulta ao SPC</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="card-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>Crédito Imediato</h3>
+                        <p>Até R$ 50.000 em minutos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUE ESCOLHER HELPBANK -->
+    <section class="benefits" id="sobre">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Por que escolher a <span class="highlight">HelpBank</span>?</h2>
+                <p class="section-subtitle">Somos referência em empréstimo consignado com atendimento diferenciado</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Taxas Reduzidas</h3>
+                    <p>As menores taxas de juros do mercado, a partir de 1,2% ao mês</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Parcelas que Cabem no Bolso</h3>
+                    <p>Planejamento personalizado com parcelas que se adequam ao seu orçamento</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3>Sem Consulta ao SPC/Serasa</h3>
+                    <p>Nome sujo? Não tem problema! Aprovação garantida para consignado</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Atendimento Humanizado</h3>
+                    <p>Equipe especializada pronta para te ajudar em todas as etapas</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Crédito Rápido e Seguro</h3>
+                    <p>Aprovação em até 24 horas com total segurança e transparência</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Processo 100% Digital</h3>
+                    <p>Faça tudo online, sem sair de casa e sem burocracia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUEM PODE CONTRATAR -->
+    <section class="who-can" id="emprestimo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Quem pode <span class="highlight">contratar</span>?</h2>
+                <p class="section-subtitle">Confira se você se encaixa em um dos perfis abaixo</p>
+            </div>
+            
+            <div class="who-can-grid">
+                <div class="who-card">
+                    <div class="who-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Aposentados e Pensionistas do INSS</h3>
+                    <p>Crédito consignado com desconto direto no benefício do INSS. Seguro e sem complicação.</p>
+                    <ul class="who-list">
+                        <li><i class="fas fa-check"></i> Taxas a partir de 1,2% a.m.</li>
+                        <li><i class="fas fa-check"></i> Até 84 meses para pagar</li>
+                        <li><i class="fas fa-check"></i> Sem consulta ao SPC</li>
+                    </ul>
+                </div>
+                
+                <div class="who-card">
+                    <div class="who-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Servidores Públicos</h3>
+                    <p>Condições especiais para servidores públicos federais, estaduais e municipais.</p>
+                    <ul class="who-list">
+                        <li><i class="fas fa-check"></i> Aprovação facilitada</li>
+                        <li><i class="fas fa-check"></i> Parcelas descontadas na folha</li>
+                        <li><i class="fas fa-check"></i> Sem fiador ou avalista</li>
+                    </ul>
+                </div>
+                
+                <div class="who-card">
+                    <div class="who-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Trabalhadores CLT</h3>
+                    <p>Empréstimo consignado privado com desconto direto em folha de pagamento.</p>
+                    <ul class="who-list">
+                        <li><i class="fas fa-check"></i> Para empresas conveniadas</li>
+                        <li><i class="fas fa-check"></i> Processo 100% digital</li>
+                        <li><i class="fas fa-check"></i> Resposta em até 24h</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMULAÇÃO -->
+    <section class="simulation" id="simulacao">
+        <div class="simulation-background">
+            <div class="simulation-shape"></div>
+        </div>
+        
+        <div class="container">
+            <div class="simulation-content">
+                <div class="simulation-text">
+                    <h2 class="simulation-title">Pronto para realizar seus sonhos?</h2>
+                    <p class="simulation-subtitle">Fale com um especialista agora mesmo pelo WhatsApp e descubra quanto você pode receber!</p>
+                    
+                    <div class="simulation-features">
+                        <div class="sim-feature">
+                            <i class="fas fa-rocket"></i>
+                            <span>Resposta imediata</span>
+                        </div>
+                        <div class="sim-feature">
+                            <i class="fas fa-lock"></i>
+                            <span>Dados 100% protegidos</span>
+                        </div>
+                        <div class="sim-feature">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>Sem compromisso</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/5521996310471?text=Olá!%20Gostaria%20de%20simular%20um%20empréstimo%20consignado" target="_blank" class="btn-whatsapp btn-large">
+                        <i class="fab fa-whatsapp"></i>
+                        Simular agora no WhatsApp
+                    </a>
+                    
+                    <p class="urgency-text">
+                        <i class="fas fa-fire"></i>
+                        Simule agora e descubra quanto você pode receber hoje mesmo!
+                    </p>
+                </div>
+                
+                <div class="simulation-visual">
+                    <div class="sim-card">
+                        <div class="sim-card-header">
+                            <i class="fas fa-calculator"></i>
+                            <h3>Simulação Rápida</h3>
+                        </div>
+                        <div class="sim-card-body">
+                            <div class="sim-item">
+                                <span class="sim-label">Valor disponível:</span>
+                                <span class="sim-value">Até R$ 50.000</span>
+                            </div>
+                            <div class="sim-item">
+                                <span class="sim-label">Parcelas:</span>
+                                <span class="sim-value">Até 84x</span>
+                            </div>
+                            <div class="sim-item">
+                                <span class="sim-label">Taxa:</span>
+                                <span class="sim-value">A partir de 1,2% a.m.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDIBILIDADE -->
+    <section class="credibility">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Segurança e <span class="highlight">Credibilidade</span></h2>
+                <p class="section-subtitle">Sua confiança é nossa prioridade</p>
+            </div>
+            
+            <div class="credibility-grid">
+                <div class="cred-card">
+                    <div class="cred-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Atendimento Seguro</h3>
+                    <p>Processos auditados e certificados seguindo as normas do Banco Central</p>
+                </div>
+                
+                <div class="cred-card">
+                    <div class="cred-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Dados Protegidos</h3>
+                    <p>Criptografia de ponta a ponta e total conformidade com a LGPD</p>
+                </div>
+                
+                <div class="cred-card">
+                    <div class="cred-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Empresa Confiável</h3>
+                    <p>Mais de 10.000 clientes satisfeitos em todo o Brasil</p>
+                </div>
+                
+                <div class="cred-card">
+                    <div class="cred-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Transparência Total</h3>
+                    <p>Sem taxas ocultas, tudo explicado de forma clara e detalhada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em <span class="highlight">Contato</span></h2>
+                <p class="section-subtitle">Estamos prontos para te atender</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Fale Conosco</h3>
+                    <p>Nossa equipe está disponível para esclarecer todas as suas dúvidas sobre empréstimo consignado.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <p>(21) 99631-0471</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>E-mail</strong>
+                            <p>contato@helpbank.com.br</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Horário de Atendimento</strong>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">Help</span><span class="logo-highlight">Bank</span>
+                    </div>
+                    <p>Empréstimo consignado com as melhores taxas do mercado</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#emprestimo">Empréstimo Consignado</a>
+                    <a href="#simulacao">Simulação</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/5521996310471" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 HelpBank – Todos os direitos reservados</p>
+                <p class="footer-dev">Desenvolvido por <strong>Jeniffer Maximo</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5521996310471?text=Olá!%20Gostaria%20de%20simular%20um%20empréstimo%20consignado" target="_blank" class="whatsapp-float" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Menu Mobile Toggle
+        const navbarToggle = document.getElementById('navbarToggle');
+        const navbarMenu = document.getElementById('navbarMenu');
+        
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+            const icon = navbarToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarMenu.classList.remove('active');
+                const icon = navbarToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+        
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const formData = {
+                    nome: document.getElementById('nome').value,
+                    email: document.getElementById('email').value,
+                    telefone: document.getElementById('telefone').value,
+                    mensagem: document.getElementById('mensagem').value
+                };
+                
+                try {
+                    const response = await fetch('/api/contato', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                        contactForm.reset();
+                    } else {
+                        alert('Erro ao enviar mensagem. Tente novamente.');
+                    }
+                } catch (error) {
+                    console.error('Erro:', error);
+                    alert('Erro ao enviar mensagem. Tente novamente.');
+                }
+            });
+        }
+        
+        // Animação de entrada dos elementos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.benefit-card, .who-card, .cred-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
