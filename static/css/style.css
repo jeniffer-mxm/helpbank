@@ -10,13 +10,13 @@
 
 :root {
     /* Cores principais */
-    --color-primary: #6944ba;
+    --color-primary: #491d91;
     --color-secondary: #dd7d18;
     --color-accent: #5fb49b;
     
     /* Variações */
     --color-primary-light: rgba(105, 68, 186, 0.1);
-    --color-primary-dark: #4d2f8a;
+    --color-primary-dark: #491d91;
     --color-secondary-light: rgba(221, 125, 24, 0.1);
     --color-accent-light: rgba(95, 180, 155, 0.1);
     
@@ -80,7 +80,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: var(--color-white);
+    background-color: #491d91;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
 }
@@ -93,7 +93,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--spacing-sm) 0;
+    padding: 0.5rem 0; /* Reduzimos de 1rem para 0.5rem */
+    height: 80px;      /* Forçamos uma altura fixa razoável */
+    
 }
 
 .navbar-brand {
@@ -101,6 +103,13 @@ body {
     font-size: 1.8rem;
     font-weight: 800;
     cursor: pointer;
+}
+
+.navbar-brand img {
+    height: 100px !important;    /* Aumentamos para 75px e corrigimos a pontuação */
+    width: auto;
+    display: block;
+    max-height: none !important; /* Remove qualquer limitação oculta */
 }
 
 .logo-text {
@@ -118,7 +127,7 @@ body {
 }
 
 .nav-link {
-    color: var(--color-black);
+    color: #000000;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -138,11 +147,12 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--color-primary);
+    color: var(--color-secondary); /* Isso deixará o link laranja ao passar o mouse */
 }
 
-.nav-link:hover::after {
-    width: 100%;
+/* Garante que a linha decorativa abaixo do link também apareça corretamente */
+.nav-link::after {
+    background: var(--color-secondary); 
 }
 
 .btn-cta-nav {
@@ -163,13 +173,12 @@ body {
 }
 
 .navbar-toggle {
-    display: none;
-    background: none;
+    color: #ffffff; /* Define a cor do ícone como branco */
+    background: transparent;
     border: none;
     font-size: 1.5rem;
-    color: var(--color-primary);
     cursor: pointer;
-    padding: 0.5rem;
+    display: none; /* Lembre-se que ele só aparece no celular */
 }
 
 /* ========================================
@@ -1016,6 +1025,20 @@ body {
     font-size: 1.8rem;
     font-weight: 800;
     margin-bottom: var(--spacing-sm);
+}
+
+.footer-logo-img {
+    height: 110px; /* Ajuste este valor conforme desejar o tamanho no rodapé */
+    width: auto;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Opcional: Garante que a logo fique alinhada à esquerda no desktop */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer-links h4,
