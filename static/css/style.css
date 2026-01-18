@@ -934,10 +934,14 @@ body {
 }
 
 .contact-form-container {
-    background: var(--color-white);
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+     background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-form {
@@ -1235,4 +1239,10 @@ body {
         bottom: 20px;
         right: 20px;
     }
+}
+
+.mascote-helpbank {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
 }

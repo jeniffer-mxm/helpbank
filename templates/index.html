@@ -339,7 +339,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <strong>E-mail</strong>
-                            <p>jeniffer1994maximo@gmail.com</p>
+                            <p>suportehelpbank@gmail.com</p>
                         </div>
                     </div>
                     
@@ -353,29 +353,11 @@
                 </div>
                 
                 <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="nome">Nome Completo</label>
-                            <input type="text" id="nome" name="nome" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="telefone">Telefone</label>
-                            <input type="tel" id="telefone" name="telefone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
-                    </form>
+                    <img 
+                        src="{{ url_for('static', filename='image/MASCOTE_HB.SVG') }}" 
+                        alt="Mascote HelpBank"
+                        class="mascote-helpbank"
+                    >
                 </div>
             </div>
         </div>
@@ -477,41 +459,7 @@
         });
         
         // Form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                
-                const formData = {
-                    nome: document.getElementById('nome').value,
-                    email: document.getElementById('email').value,
-                    telefone: document.getElementById('telefone').value,
-                    mensagem: document.getElementById('mensagem').value
-                };
-                
-                try {
-                    const response = await fetch('/api/contato', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(formData)
-                    });
-                    
-                    const result = await response.json();
-                    
-                    if (result.success) {
-                        alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-                        contactForm.reset();
-                    } else {
-                        alert('Erro ao enviar mensagem. Tente novamente.');
-                    }
-                } catch (error) {
-                    console.error('Erro:', error);
-                    alert('Erro ao enviar mensagem. Tente novamente.');
-                }
-            });
-        }
+       
         
         // Animação de entrada dos elementos
         const observerOptions = {
